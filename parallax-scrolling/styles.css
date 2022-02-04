@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.background{
+    transform: translateZ(-30px) scale(4.3);
+}
+.foreground{
+    transform: translateZ(-15px) scale(2.6);
+}
+.foreground2{
+    transform: translateZ(-8px) scale(0.5);
+}
+
+.background,
+.foreground2,
+.foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.title{
+    font-size: 5rem;
+    margin-right: 40%;
+    color: white;
+    text-shadow: 0 0 5px black;
+    transform: translateZ(-1px) scale(1.8);
+}
+
+section {
+    font-size: 2rem;
+    padding: 2rem;
+    background-color: #333;
+    color: white;
+}
