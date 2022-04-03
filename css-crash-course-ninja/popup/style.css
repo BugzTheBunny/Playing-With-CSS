@@ -1,0 +1,291 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+#jumpy{
+    position: absolute;
+    right: 10rem;
+    height: 4rem;
+    width: 7rem;
+    background-color: lightgreen;
+    border-radius: 9px;
+    animation: jumpy 1s ease-in forwards;
+}
+
+#popup{
+    position: absolute;
+    left: 10rem;
+    height: 4rem;
+    width: 7rem;
+    transform-origin: 10px 10px; /* Where the animations should happen */
+    background-color: lightgreen;
+    border-radius: 9px;
+    animation: jumpy 1.2s ease-in forwards, 
+    2s swingy 1s ease-in-out infinite; /* Change infinite to forward to make it stay in place.*/
+}
+
+#dancy{
+    position: absolute;
+    left: 25rem;
+    height: 4rem;
+    width: 7rem;
+    background-color: lightgreen;
+    border-radius: 9px;
+    animation: jumpy 1.2s ease-in forwards, 1s dancy 2s ease-out infinite;
+}
+
+#sidetoside{
+    position: absolute;
+    left: 45rem;
+    height: 4rem;
+    width: 7rem;
+    background-color: lightgreen;
+    border-radius: 9px;
+    animation: jumpy 1.2s ease-in forwards, 1s sidetoside 1.2s ease-out infinite;
+}
+
+#eyecancer{
+    position: absolute;
+    left: 60rem;
+    height: 4rem;
+    width: 7rem;
+    background-color: lightgreen;
+    border-radius: 9px;
+    animation: jumpy 1.2s ease-in forwards, 1s eyecancer 1.2s linear infinite;
+}
+
+#card-x{
+    text-align: center;
+    position: absolute;
+    left: 75rem;
+    height: 4rem;
+    width: 7rem;
+    background-color: lightgreen;
+    border-radius: 9px;
+    animation: jumpy 1.2s ease-in forwards, 3s card-x 1.2s ease-in-out infinite;
+}
+
+#card-y{
+    text-align: center;
+    position: absolute;
+    left: 85rem;
+    height: 4rem;
+    width: 7rem;
+    background-color: lightgreen;
+    border-radius: 9px;
+    animation: jumpy 1.2s ease-in forwards, 3s card-y 1.2s ease-in-out infinite;
+}
+
+#card-y-buttom{
+    text-align: center;
+    position: absolute;
+    transform-origin: 0px 4rem ; /* Where the animations should happen */
+    left: 95rem;
+    height: 4rem;
+    width: 7rem;
+    background-color: lightgreen;
+    border-radius: 9px;
+    animation: jumpy 1.2s ease-in forwards, 3s card-x 1.2s ease-in-out infinite;
+}
+
+#bigboi{
+    text-align: center;
+    position: absolute;
+    left: 95rem;
+    height: 4rem;
+    width: 7rem;
+    background-color: yellow;
+    border-radius: 9px;
+    animation: bigboi 5s ease-out forwards;
+}
+
+#insideout{
+    text-align: center;
+    position: absolute;
+    left: 75rem;
+    height: 4rem;
+    width: 7rem;
+    background-color: black;
+    border-radius: 9px;
+    animation: insideout 2s linear infinite;
+}
+
+
+@keyframes jumpy{
+    0% {
+        opacity: 0;
+        transform: translateY(0%);
+    }
+    69%{
+        transform: translateY(8.5rem);
+        background-color: lightgreen;
+    }
+    70% {
+        transform: translateY(8.5rem);
+        background-color: red;
+
+    }
+    75% {
+        transform: translateY(8rem);
+    }
+    85% {
+        transform: translateY(8.5rem);
+    }
+    100% {
+        background-color: lightgreen;
+        transform: translateY(8rem);
+    }
+}
+
+@keyframes swingy{
+    0%{
+        transform: translateY(8rem) rotateZ(0deg)
+    }
+    40%{
+        transform: translateY(8rem) rotateZ(90deg)
+    }
+    70%{
+        transform: translateY(8rem) rotateZ(70deg);
+    }
+    100%{
+        transform: translateY(8rem) rotateZ(75deg);
+    }
+}
+
+@keyframes dancy{
+    0%{
+        transform: translateY(8rem) rotateZ(0deg);
+
+    }
+    20%{
+        transform: translateY(8rem) rotateZ(-30deg);
+    }
+    40%{
+        transform: translateY(8rem) rotateZ(30deg);
+
+    }
+    60%{
+        transform: translateY(8rem) rotateZ(-20deg);
+        
+    }
+    80%{
+        transform: translateY(8rem) rotateZ(20deg);
+        
+    }
+    100%{
+        transform: translateY(8rem) rotateZ(0deg);
+        
+    }
+}
+
+@keyframes sidetoside{
+    0%{
+        transform: translateY(8rem) translateX(0rem);
+
+    }
+    20%{
+        transform: translateY(8rem) translateX(1rem);
+    }
+    40%{
+        transform: translateY(8rem) translateX(-1rem);
+
+    }
+    60%{
+        transform: translateY(8rem) translateX(0.5rem);
+        
+    }
+    80%{
+        transform: translateY(8rem) translateX(-0.5rem);
+        
+    }
+    100%{
+        transform: translateY(8rem) translateX(0rem);
+        
+    }
+}
+
+@keyframes eyecancer{
+    0%{
+        transform: translateY(8rem);
+        border: 2px solid red;
+    }
+    20%{
+        transform: translateY(8rem);
+        border: 2px solid green;
+
+    }
+    40%{
+        transform: translateY(8rem);
+        border: 2px solid yellow;
+
+    }
+    60%{
+        transform: translateY(8rem);
+        border: 2px solid blue;
+        
+    }
+    80%{
+        transform: translateY(8rem);
+        border: 2px solid black;
+        
+    }
+    100%{
+        transform: translateY(8rem);
+        border: 2px solid rgb(0, 255, 221);
+        
+    }
+}
+
+@keyframes card-x{
+    0% {
+        transform: translateY(8rem) rotateX(0deg);
+    }
+    50% {
+        transform: translateY(8rem) rotateX(180deg);
+    }
+    100% {
+        transform: translateY(8rem) rotateX(360deg);
+    }
+}
+
+@keyframes card-y{
+    0% {
+        transform: translateY(8rem) rotateY(0deg);
+    }
+    50% {
+        transform: translateY(8rem) rotateY(180deg);
+    }
+    100% {
+        transform: translateY(8rem) rotateY(360deg);
+    }
+}
+
+@keyframes bigboi{
+    0%{
+        z-index: 0;
+        transform: translateY(0rem) scale(0.5);
+    }
+    100%{
+        z-index: 0;
+        transform: translateY(25rem) scale(2);
+
+    }
+}
+
+@keyframes insideout{
+    0%{
+        z-index: 1;
+        transform: translateY(25rem) scale(2);
+    }
+    50%{
+        transform: translateY(25rem) scale(0.1);
+        z-index: -1;
+    }
+    100%{
+        transform: translateY(25rem) scale(2);
+        z-index: 1;
+    }
+}

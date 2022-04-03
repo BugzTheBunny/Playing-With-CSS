@@ -124,3 +124,26 @@ There is a shorter way to declare animations:
     animation: wind 65s linear infinite reverse;
 }
 ```
+
+----
+## **Chaining Animations**
+You can chain animations together!
+also you can declare animations in another way, for example if we have 3 states, instead of 2 like `from` and `to`, we can use precentages, for example lets add a steering animations, to make luigi go nuts.
+
+```
+
+.luigi{
+    position: absolute;
+    top: 100px;
+    left: 0%;
+    animation: drive 5s both infinite linear,
+                steer 2s both infinite linear;
+}
+....
+
+@keyframes steer{
+    0%{top: 80px}
+    50%{top: -50px}
+    100%{top: 80px}
+}
+```
